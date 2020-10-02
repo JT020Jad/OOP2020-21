@@ -13,20 +13,31 @@ class Types_and_Strings:
         message = input("Enter your noun: ")
         print("Originally entered: "+ message)
 
-        #
+
         # Enter your own print statements below:
-        #
+        Greeting = "Hello World, We are currently inside PyCharm IDE"
+
 
         # print only first and last of the sentence:
+        print(Greeting[0] + Greeting[-1])
 
 
         # use slice notation:
+        print(Greeting[:4])
+        print(Greeting[2:])
+        print(Greeting[:])
 
 
         # escaping a character:
+        print("\tThat\'s Fantastic")
 
 
         # find all a's in the input word and count how many there are:
+        Position_Of_A = Greeting.find("a")
+        print(Position_Of_A)
+
+        Num_Of_A = Greeting.count("a")
+        print(Num_Of_A)
 
 
         # replace all occurences of the character a with the - sign
