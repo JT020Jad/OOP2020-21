@@ -86,7 +86,7 @@ characters = 'fake mews'
 
 for letter in characters:
     doc.insert(letter)
-    
+
 doc.backward(44)
 doc.delete()
 doc.insert('n')
