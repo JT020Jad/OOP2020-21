@@ -1,7 +1,7 @@
 # Object Oriented Programming
 # TU856 & TU858
 # Semester 1, 2020-21
-# B. Schoen-Phelan
+# C19319183 Mohammad Touihri
 # 11-12-2020
 
 class Document:
@@ -14,7 +14,6 @@ class Document:
         self.characters = []
         self.cursor = 0
         self.filename = file_name
-
 
     def insert(self, character):
         """
@@ -31,7 +30,6 @@ class Document:
         self.characters.insert(self.cursor, character)
         self.cursor += 1
 
-
     def delete(self):
         """
         Method deletes a character from the current
@@ -40,7 +38,6 @@ class Document:
         Returns: none
         """
         del self.characters[self.cursor]
-
 
     def save(self):
         """
@@ -54,7 +51,6 @@ class Document:
 
         print(f"Your file {self.filename} has "
               f"been created.\nPlease check.\n")
-
 
     def forward(self, steps):
         """
@@ -70,7 +66,6 @@ class Document:
         """
         self.cursor += steps
 
-
     def backward(self, steps):
         """
         Method backward moves the cursor position to
@@ -85,14 +80,13 @@ class Document:
         self.cursor -= steps
 
 
-
 # initialising an object and using the class
 doc = Document("lab_t2.txt")
 characters = 'fake mews'
 
 for letter in characters:
     doc.insert(letter)
-
+    
 doc.backward(44)
 doc.delete()
 doc.insert('n')
