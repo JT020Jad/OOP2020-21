@@ -15,6 +15,7 @@ class Document:
         self.cursor = 0
         self.filename = file_name
 
+
     def insert(self, character):
         """
         Method inserts a character at the current
@@ -30,6 +31,7 @@ class Document:
         self.characters.insert(self.cursor, character)
         self.cursor += 1
 
+
     def delete(self):
         """
         Method deletes a character from the current
@@ -38,6 +40,7 @@ class Document:
         Returns: none
         """
         del self.characters[self.cursor]
+
 
     def save(self):
         """
@@ -51,6 +54,7 @@ class Document:
 
         print(f"Your file {self.filename} has "
               f"been created.\nPlease check.\n")
+
 
     def forward(self, steps):
         """
@@ -66,6 +70,7 @@ class Document:
         """
         self.cursor += steps
 
+
     def backward(self, steps):
         """
         Method backward moves the cursor position to
@@ -80,6 +85,7 @@ class Document:
         self.cursor -= steps
 
 
+
 # initialising an object and using the class
 doc = Document("lab_t2.txt")
 characters = 'fake mews'
@@ -87,7 +93,7 @@ characters = 'fake mews'
 for letter in characters:
     doc.insert(letter)
 
-doc.backward(4)
+doc.backward(44)
 doc.delete()
 doc.insert('n')
 doc.save()
